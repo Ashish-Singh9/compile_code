@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/compile.css">
+    <title>Compile Code</title>
+</head>
+<body>
+    <div id="compile-cont">
+        <div id="nav1" class="flx">
+            <div>Type Your Code</div>
+        </div>
+        <div id="nav2" class="flx">
+            <div>
+                <select name="lang-code" id="lang-code">
+                    <option value="0">Python</option>
+                    <option value="4">JavaScript</option>
+                    <option value="7">C</option>
+                    <option value="77">C++</option>
+                    <option value="8">Java</option>
+                </select>
+                
+            </div>
+        </div>
+        <div class="cont">
 
+          <pre id="editor" ></pre>
+          </div>
+       
+        <div id="output">OUTPUT:</div>
+        <div id="btn">
+            <button id="compile">Compile</button>
+        </div>
+    </div>
+</body>
+<script src="https://ajaxorg.github.io/ace-builds/src/ace.js"></script>
+  <script>
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/twilight");
+      function getCodeForComp(){
+         return (editor.getValue());
+      }
+  </script>
+  <script src="js/compile.js"></script>
+</html>
